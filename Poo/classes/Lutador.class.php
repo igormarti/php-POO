@@ -14,14 +14,13 @@ class Lutador{
     private $derrotas;
     private $empates;
 
-    public function __construct($no, $na, $id, $al, $pe, $ca, $vi, $de, $em)
+    public function __construct($no, $na, $id, $al, $pe, $vi, $de, $em)
     {   
         $this->setNome($no);
         $this->setNacionalidade($na);
         $this->setIdade($id);
         $this->setAltura($al);
         $this->setPeso($pe);
-        $this->setCategoria($ca);
         $this->setVitorias($vi);
         $this->setDerrotas($de);
         $this->setEmpates($em);
