@@ -4,12 +4,16 @@ require 'classes/Caneta.class.php';
 require 'classes/Conta.class.php';
 require 'classes/ControleRemoto.class.php';
 require 'classes/Luta.class.php';
+require 'classes/Pessoa.class.php';
+require 'classes/Livro.class.php';
 
 use Poo\classes\Caneta;
 use Poo\classes\Conta;
 use Poo\classes\ControleRemoto;
+use Poo\classes\Livro;
 use Poo\classes\Luta;
 use Poo\classes\Lutador;
+use Poo\classes\Pessoa;
 
 class Index{
 
@@ -44,6 +48,15 @@ class Index{
         $luta1 =  new Luta();
         $luta1->MarcarLuta($l1, $l2);
         $luta1->Lutar();
+
+        $pessoa =  new Pessoa("Igor", "M", 25);
+        $pessoa->fazerAniversario();
+        $livro = new Livro("Livro de PHP", " Pablo Dall’Oglio", 350, $pessoa);
+
+        $livro->abrir();
+        $livro->avancarPagina();
+        $livro->folhear(40);
+        $livro->detalhes();
     }
 
 }
